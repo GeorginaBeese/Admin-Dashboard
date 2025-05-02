@@ -152,22 +152,67 @@ ul, li {
 .container .main-content {
     background: rgb(216, 221, 226);
     grid-area: 2 / 2 / 3 / 3;
-
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 
-.container .main-content .projects {
+.container .main-content .heading {
+
+}
+
+.container .main-content .projects .project-cards {
     display: grid;
+    gap: 15px;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(4, minmax(200px, 1fr));
+
+}
+
+.container .main-content .projects {
+    margin: 15px;
 }
 
 .container .main-content .projects .heading {
-    grid-area: 1 / 1 / 2 / 3;
+    font-weight: 500;
 }
 
-.container .main-content .announcements-trending {
+.container .main-content .projects .project-cards .card {
+    background-color: white;
+    border-radius: 10px;
+    border-left: 8px solid rgb(249, 230, 148); 
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 1px 3px 3px #ccc;
+}
+
+.container .main-content .projects .project-cards .card .title {
+    font-weight: 500;
+}
+
+.container .main-content .projects .project-cards .card p {
+    margin: 5px;
+}
+
+.container .main-content .projects .project-cards .card .icons {
+    display: flex;
+    justify-content: flex-end;
 
 }
+
+.container .main-content .projects .project-cards .card .icons img {
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+}
+
+.container .main-content .projects .project-cards .card .description {
+    color: grey;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+
+
 
