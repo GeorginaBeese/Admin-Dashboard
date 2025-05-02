@@ -18,7 +18,6 @@ ul, li {
   
 
 .container {
-    background: pink;
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 1fr 5fr;
@@ -31,15 +30,83 @@ ul, li {
     flex-direction: column;
 }
 
-.container .header .search-bar {
+.header .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 20px 30px;
+}
+
+.header .search-bar .profile-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.header .search-bar img {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+.header .search-bar input {
+    background-color: rgb(216, 221, 226);
+    border: none;
+    border-radius: 20px;
+    flex-grow: 4;
+    height: 30px;
+    margin-right: 70px;
+}
+
+.header .search-bar .title {
+    padding-right: 30px;
+    padding-left: 10px;
+    font-weight: 500;
+    
+}
+
+.header .welcome {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0px 30px;
+    margin-bottom: 20px;
+    
+}
+
+.header .welcome .menu ul {
     display: flex;
 }
 
-.container .header .welcome {
-    display: flex;
+.header .welcome .menu ul li {
+    color: white;
+    justify-content: center;
+    padding: 10px 0px;
+    width: 90px;
+    margin: 10px;
+    background-color: rgb(47, 156, 228);
+    border-radius: 20px;
 }
-.container .header .welcome .menu ul {
-    display: flex;
+
+.header .welcome img {
+    width: 60px;
+    height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.welcome .welcome-title {
+    flex-grow: 4;
+}
+
+.welcome-title div:first-child {
+    font-size: 15px;
+    padding-bottom: 5px;
+    font-weight: 500; 
+}
+
+.welcome-title .title {
+    font-size: 20px;
+    font-weight: 500; 
 }
 
 .sidebar img {
@@ -47,6 +114,10 @@ ul, li {
     height: 50px;
     padding: 10px;
     filter: invert(100%) sepia(0%) saturate(25%) hue-rotate(56deg) brightness(105%) contrast(106%);
+}
+
+.profile-icon {
+    border-radius: 50%;
 }
 
 
@@ -57,7 +128,7 @@ ul, li {
     filter: invert(100%) sepia(0%) saturate(25%) hue-rotate(56deg) brightness(105%) contrast(106%);
 }
 
-.menu-header {
+.menu-header .title {
     font-size: 25px;
 }
 
@@ -65,15 +136,13 @@ ul, li {
     display: flex;
     align-items: center;
     color: white;
-    font-weight: 500;
-    
+    font-weight: 500;   
 }
+
+
 .menu ul li:nth-child(7) {
     padding-top: 30px;
  }
-
-
-
 
 .container .sidebar {
     background: rgb(47, 156, 228);
